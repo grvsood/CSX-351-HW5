@@ -281,7 +281,17 @@ class LList<T> implements ListInterface<T> {
      */
     public void reverse() {
 
-        // CODE TO BE COMPLETED        
+        // CODE TO BE COMPLETED  
+    	Node curr , prev , next;
+    	prev=null;
+    	curr=firstNode;
+    	while(curr!=null) {
+    		next=curr.next;
+    		curr.next=prev;
+    		prev=curr;
+    		curr=next;
+    	}
+    	firstNode=prev;
 
     }
 
