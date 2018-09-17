@@ -284,7 +284,19 @@ class AList<T> implements ListInterface<T> {
     */
     public void reverse()
     {
-        // COMPLETE THIS METHOD       
+        // COMPLETE THIS METHOD 
+    	checkInitialization();
+    	// i is element in the left to be swapped with j last element in the right
+    	int i=1 , j=numberOfEntries ; 
+    	T temp;
+    	while(i<=j) {
+    		temp=list[i];
+    		list[i]=list[j];
+    		list[j]=temp;
+    		i++;
+    		j--;
+    	}
+    
     }
     
     
