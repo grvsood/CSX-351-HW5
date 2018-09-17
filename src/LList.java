@@ -300,6 +300,21 @@ class LList<T> implements ListInterface<T> {
     public void cycle() {
 
         // CODE TO BE COMPLETED        
-
+    	if(firstNode==null  || firstNode.next==null) {
+    		return;
+    	}
+    	//store first node in first
+    	Node first= firstNode;
+    	//fix the new firstNode
+    	firstNode=firstNode.next;
+    	//set curr to first and move till the end
+    	Node curr=firstNode;
+    	while(curr.next!=null) {
+    		curr=curr.next;
+    	}
+    	//set the first at the end now 
+    	curr.next=first;
+    	//set first.next to null
+    	first.next=null;
     }
 }
