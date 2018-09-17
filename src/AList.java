@@ -304,7 +304,13 @@ class AList<T> implements ListInterface<T> {
     */
     public void cycle()
     {
-        // COMPLETE THIS METHOD       
+        // COMPLETE THIS METHOD 
+    	int i=0;
+    	T temp=list[1];
+    	for(i=2; i<=numberOfEntries;i++) {
+    		list[i-1]=list[i];
+    	}
+    	list[numberOfEntries]=temp;
     }
 
 }
